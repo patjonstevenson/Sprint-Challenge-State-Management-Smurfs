@@ -1,0 +1,64 @@
+import {
+    FETCH_SMURF,
+    FETCH_SUCCESS,
+    FETCH_FAILURE,
+    POST_SMURF,
+    POST_SUCCESS,
+    POST_FAILURE
+} from "../actions";
+
+
+const initialState = {
+    smurfs: [],
+    fetching: false,
+    fetchError: "",
+    posting: false,
+    postError: ""
+}
+
+const reducer = (state, action) => {
+
+    switch (action.type) {
+        case FETCH_SMURF:
+            return {
+                ...state,
+                fetching: true,
+                fetchError: ""
+            }
+        case FETCH_SUCCESS:
+            return {
+                ...state,
+                fetching: false,
+                fetchError: "",
+                smurfs: action.payload
+            }
+        case FETCH_FAILURE:
+            return {
+                ...state,
+                fetching: false,
+                fetchError: action.payload
+            }
+        case POST_SMURF:
+            return {
+                ...state,
+                posting: true,
+                postError: ""
+            }
+        case POST_SUCCESS:
+            return {
+                ...state,
+                posting: false,
+                postError: "",
+            }
+        case POST_FAILURE:
+            return {
+                ...state,
+                posting: false,
+                postError: action.payload
+            }
+        default:
+            return state;
+    }
+}
+
+export default reducer;

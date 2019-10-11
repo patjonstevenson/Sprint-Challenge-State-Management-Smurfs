@@ -1,0 +1,10 @@
+const FETCH_SMURF = "FETCH_SMURF";
+const FETCH_SUCCESS = "FETCH_SUCCESS";
+const FETCH_FAILURE = "FETCH_FAILURE";
+const POST_SMURF = "POST_SMURF";
+const POST_SUCCESS = "POST_SUCCESS";
+const POST_FAILURE = "POST_FAILURE";
+
+const fetchSmurf = () => {
+    dispatch("FETCH_SMURF")
+}
