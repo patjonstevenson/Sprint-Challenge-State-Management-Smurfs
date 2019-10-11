@@ -1,5 +1,5 @@
 import {
-    FETCH_SMURF,
+    FETCH_SMURFS,
     FETCH_SUCCESS,
     FETCH_FAILURE,
     POST_SMURF,
@@ -16,16 +16,17 @@ const initialState = {
     postError: ""
 }
 
-const reducer = (state, action) => {
+const reducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case FETCH_SMURF:
+        case FETCH_SMURFS:
             return {
                 ...state,
                 fetching: true,
                 fetchError: ""
             }
         case FETCH_SUCCESS:
+            console.log("Smurf data passed to reducer:\n", action.payload);
             return {
                 ...state,
                 fetching: false,
