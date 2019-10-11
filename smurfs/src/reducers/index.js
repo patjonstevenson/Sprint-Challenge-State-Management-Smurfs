@@ -50,6 +50,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 posting: false,
                 postError: "",
+                smurfs: action.payload
             }
         case POST_FAILURE:
             return {

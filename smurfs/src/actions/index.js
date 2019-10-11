@@ -25,12 +25,12 @@ export const fetchSmurfs = () => {
 
 export const postSmurf = smurf => {
     return dispatch => {
-        dispatch({ type: "post_SMURF" });
+        dispatch({ type: POST_SMURF });
         axios
             .post("http://localhost:3333/smurfs", smurf)
             .then(res => {
                 console.log("Post success!\n", res);
-                dispatch({ type: FETCH_SUCCESS, payload: res })
+                dispatch({ type: FETCH_SUCCESS, payload: res.data })
             })
             .catch(err => {
                 console.log("Oops! Something went wrong posting data:\n", err);
