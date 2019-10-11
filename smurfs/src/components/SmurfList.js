@@ -21,7 +21,6 @@ const SmurfList = props => {
     }
     return (
         <div className="smurf-list">
-            <h2>Smurfs List</h2>
             {props.smurfs.map(smurf => <Smurf key={smurf.id} smurf={smurf} />)}
         </div>
     );
