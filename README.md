@@ -23,10 +23,28 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+Allows you to share state without prop drilling.
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+The store is where the state lives, and all the components that need the state get connected to the store, which is why it is the single source of truth.
+
+Reducers are used to describe how to update the state given an action.
+
+The actions themselves contain a type and a payload. The type tells the reducer which action to take, and the payload, which is optional, contains information to be used by the reducer to update the state.
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state is useful when multiple components at varying levels need access to the state. The store in redux is application state. When just one component and its child need access to some state, it can be more clean and easy to just use component state, which doesn't require redux.
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux thunk is middleware that allows us to use promises. The thunk is returned by an action, and has access to the dispatch function, allowing it to call dispatch from within .then or .catch and update the store with data from the promise.
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+My favorite state management system is redux. I like the reducer pattern, and I like it scales to bigger applications.
 
 ## Project Set Up
 

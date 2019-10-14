@@ -26,3 +26,37 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.smurf-form {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5% 30%;
+  align-items: left;
+  justify-content: space-evenly;
+}
+label {
+  width: 15%;
+}
+.smurf-input {
+  margin: 2.5%;
+  display: flex;
+  justify-content: space-between;
+  width: 330px;
+}
+
+
+
+.smurf-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2.5%;
+  justify-content: space-evenly;
+}
+
+.smurf {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 2.5%;
+  box-shadow: 2px 2px gray;
+}
